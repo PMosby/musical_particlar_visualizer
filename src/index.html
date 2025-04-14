@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musical Particle Visualizer</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        .controls {
+            position: fixed;
+            bottom: 20px;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="visualizer"></canvas>
+    <div class="controls">
+        <input type="file" id="audioInput" accept="audio/*">
+        <button id="playPause">Play</button>
+    </div>
+    <script src="audioAnalyzer.js"></script>
+    <script src="particle.js"></script>
+    <script src="particleSystem.js"></script>
+    <script src="main.js"></script>
+</body>
+</html> 
