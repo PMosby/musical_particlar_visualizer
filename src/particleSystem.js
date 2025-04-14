@@ -469,10 +469,12 @@ class ParticleSystem {
         if (this.cleanMode) {
             this.controlHint.style.display = 'none';
             this.controlPanel.style.display = 'none';
+            document.querySelector('.controls').style.display = 'none';
             this.showControls = false;
         } else {
             this.controlHint.style.display = 'flex';
             this.cleanModeButton.style.display = 'flex';
+            document.querySelector('.controls').style.display = 'block';
         }
     }
 
